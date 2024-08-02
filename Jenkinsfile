@@ -5,7 +5,9 @@ DOCKER_IMAGE = "jenkins_datascientestapi"
 DOCKER_TAG = "v.${BUILD_ID}.0" // we will tag our images with the current build in order to increment the value by 1 with each new build
 }
 agent any // Jenkins will be able to select all available agents
-// J'ajouterai le trigger ici au besoin
+triggers {
+    githubPush()
+  }  // To trigger a build automatically
 stages {
         stage(' Docker Build'){ // docker build image stage
             steps {
