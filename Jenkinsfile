@@ -128,6 +128,7 @@ stage('Deploiement en staging'){
             }
 
         }
+}
   post { // send email when the job has failed
     // ..
     failure {
@@ -139,5 +140,4 @@ stage('Deploiement en staging'){
     // ..
   }
 
-}
 }
