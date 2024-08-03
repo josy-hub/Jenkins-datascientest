@@ -69,7 +69,7 @@ stage('Deploiement en dev'){
                 sh '''
                 rm -Rf .kube
                 mkdir .kube
-                ls
+                ls yhgds // Introduction de l'erreur
                 cat $KUBECONFIG > .kube/config
                 cp fastapi/values.yaml values.yml
                 cat values.yml
